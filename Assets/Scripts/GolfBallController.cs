@@ -42,6 +42,7 @@ public class GolfBallController : MonoBehaviour {
     private void DragRelease(Vector2 inputPosition){
         float distance = Vector2.Distance((Vector2)transform.position, inputPosition);
         isDragging = false;
+        lineRenderer.positionCount = 0;
 
         // Didn't drag far enough
         if (distance < 1f) return;
